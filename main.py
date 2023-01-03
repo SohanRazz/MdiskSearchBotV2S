@@ -104,7 +104,7 @@ async def message_handler(event):
         if c <= 0:
             answer = f'''** Sorry {event.sender.first_name} No Results Found For {event.text}**
 
-**Please check the spelling on** [Google](http://www.google.com/search?q={event.text.replace(' ', '%20')}%20Movie) 🔍
+**Please check the spelling on Or Request Movies here  @RequestLuciferDownload ** [Google](http://www.google.com/search?q={event.text.replace(' ', '%20')}%20Movie) 🔍
 **Click On The Help To Know How To Watch**
     '''
 
@@ -144,7 +144,7 @@ async def message_handler(event):
     except Exception as e:
         print(e)
         await txt.delete()
-        result = await event.reply("I am Unable Search,Please Search In @PostSearchBOT🙏")
+        result = await event.reply("I am Unable Search,Please Search In @Movies_Searcher🙏")
         await asyncio.sleep(Config.AUTO_DELETE_TIME)
         await event.delete() 
         return await result.delete()
