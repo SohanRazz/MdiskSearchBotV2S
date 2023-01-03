@@ -37,7 +37,7 @@ async def dbgive_access_handler(c:Client,query: CallbackQuery):
             print(e)
 
         await query.edit_message_text("Database Channel Verified. Make sure you have joined the channel")
-        return await c.send_message(from_user, f"Your channel {db_channel} has been verified. @PostSearchBot will search posts from your Database channel in your group")
+        return await c.send_message(from_user, f"Your channel {db_channel} has been verified. @Mdisk_Search_Netflix_Bot will search posts from your Database channel in your group")
     except Exception as e:
         print(e)
 
@@ -46,7 +46,7 @@ async def dbdeny_access_handler(c:Client,query: CallbackQuery):
     from_user = int(query.data.split("#")[1])
     db_channel = int(query.data.split("#")[2])
     await query.edit_message_text("Database Channel has been rejected successfully")
-    return await c.send_message(from_user, f"Your request for channel [`{db_channel}`] has been rejected by Bot Owner Please Contact admin For More Information")
+    return await c.send_message(from_user, f"Your request for channel [`{db_channel}`] has been rejected by Bot Owner Please Contact @Sohan_Rajpurohit_7413 For More Information")
 
 
 @Client.on_callback_query(filters.regex(r"^deny_access"))
@@ -189,7 +189,7 @@ async def button(bot, cmd: CallbackQuery):
             ], 
                                         [
                         InlineKeyboardButton("Terabox", callback_data="Terabox_msg"),
-                        InlineKeyboardButton('Watch Video', url='https://t.me/CyniteBackup/17')
+                        InlineKeyboardButton('Watch Video', url='https://t.me/netflix_hindi_movies_4k/371')
                     ],[
                         InlineKeyboardButton("Back", callback_data="Watch_msg")
                     ]
