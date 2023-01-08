@@ -104,12 +104,12 @@ async def message_handler(event):
         if c <= 0:
             answer = f'''** Sorry {event.sender.first_name} No Results Found For {event.text}**
 
-**Please check the spelling on Or Request Movies here  @RequestLuciferDownload ** [Google](http://www.google.com/search?q={event.text.replace(' ', '%20')}%20Movie) 🔍
+**Please check the spelling on Or Request Movies here  https://t.me/+UYEWxNQG6l43OGQ1 ** [Google](http://www.google.com/search?q={event.text.replace(' ', '%20')}%20Movie) 🔍
 **Click On The Help To Know How To Watch**
     '''
 
             newbutton = [Button.url('Help🙋',
-                                    f'https://t.me/requestluciferdownload')]
+                                    f'https://t.me/+UYEWxNQG6l43OGQ1')]
 
             await txt.delete()
             result = await event.reply(answer, buttons=newbutton, link_preview=False)
@@ -132,7 +132,7 @@ async def message_handler(event):
         message = f'**Click Here 👇 For "{event.text}"**\n\n[🍿🎬 {str(event.text).upper()}\n🍿🎬 {str("Click me for results").upper()}]({tgraph_result})'
 
         newbutton = [Button.url('How To Watch ❓',
-                                    f'https://t.me/requestluciferdownload')]
+                                    f'https://t.me/+UYEWxNQG6l43OGQ1')]
 
         await txt.delete()
         await asyncio.sleep(0.5)
@@ -144,7 +144,7 @@ async def message_handler(event):
     except Exception as e:
         print(e)
         await txt.delete()
-        result = await event.reply("I am Unable Search,Please Search In @Movies_Searcher🙏")
+        result = await event.reply("I am Unable Search,Please Search In @Movies_Searcher2🙏")
         await asyncio.sleep(Config.AUTO_DELETE_TIME)
         await event.delete() 
         return await result.delete()
