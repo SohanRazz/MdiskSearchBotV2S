@@ -11,9 +11,9 @@ class Config(object):
     BOT_SESSION_NAME = os.getenv("BOT_SESSION_NAME", "mdisksohanbot")
     USER_SESSION_STRING = os.getenv("USER_SESSION_STRING", "1BVtsOGsBuyUnZO_yvc7mzn98QenazrPk8X77XIT6TdHkFia_7FxqOioNEDS9Z7A515Z9W79LGXiPg0EVSdvaM4jCuHZK86UBCO79xnpm7SmXBALZad4dr09hVFa4ZeONDAbEVWNPubj5ITIhUkGm-CnCOdxLeQxgKipjNDHFsWEUCUuThxq7w3SUJqB5L3jnVaODGbSjywpZ0doz5pVt_jFth_ICrdoFBMwNErvXpzk65oo2oC09iLdJakXuHq88AYiLXrXSfzmKsHadSB5RH-aaTxWKGyxOGMopNru30hQqv_HCyxdM_3g9rR5dC75K_C6i4PdaR1vR2xbp9oJoaTsiBNHTZX8=")
     CHANNEL_ID = int(os.getenv("CHANNEL_ID", "-1001836945914")) 
-    BOT_USERNAME = os.getenv("BOT_USERNAME", "Mdisk_netflix_search_bot")
+    BOT_USERNAME = os.getenv("BOT_USERNAME", "mdisk_netflix_search_bot)
     BOT_OWNER = int(os.getenv("BOT_OWNER", "5897793065"))
-#    OWNER_USERNAME = os.getenv("OWNER_USERNAME", "Sohan_rajpurohit_1")
+#    OWNER_USERNAME = os.getenv("OWNER_USERNAME", "Sohan_rajpurohit_7413")
     BACKUP_CHANNEL = os.getenv("BACKUP_CHANNEL", "Supportchat")
 #    GROUP_USERNAME = os.getenv("GROUP_USERNAME")
     START_MSG = os.getenv("START_MSG", """**Hᴇʏ {}, 
