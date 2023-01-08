@@ -10,7 +10,7 @@ class Config(object):
     BOT_TOKEN = os.getenv("BOT_TOKEN", "5837036557:AAG0qjoBBM97NufruZI1yEHdQUrnCDrlKYY")
     BOT_SESSION_NAME = os.getenv("BOT_SESSION_NAME", "mdisksohanbot")
     USER_SESSION_STRING = os.getenv("USER_SESSION_STRING", "1BVtsOKkBu6SaUlf1bpIR06UP7pd6554BDXy-rh31bBoVEh5NdA4EzBLixjmPQCpa8dpDXeCrrf7B_83V-kkt9q8p8ucZaI9-UoXXF-TQI1QfIi9NXBHEfSfkCmIZbxpxVi2cXwYaGS6q_1hOosL6yyZT6gBnBZR0njfQ_AkKBkJMWinDS2Sf9RvXGsEV5l1cyBwdeQSwhx9BfX4nK-Uyor3F0gY6R1VTMARxw2AsxUjG_pVNJG9QlcySkbcPi6pNzuSitd8ScoFNHRzkAjhu4atn8s7g-tmFL7DNhmCilaok_PnsCN_-PQCT7tvcg7iP0CmA0-QIP82gKUCoMuSA20MOB-AWZck=")
-    CHANNEL_ID = int(os.getenv("CHANNEL_ID", "-1001859917060")) 
+    CHANNEL_ID = int(os.getenv("CHANNEL_ID", "-1001836945914")) 
     BOT_USERNAME = os.getenv("BOT_USERNAME", "Mdisk_netflix_search_bot")
     BOT_OWNER = int(os.getenv("BOT_OWNER", "5897793065"))
 #    OWNER_USERNAME = os.getenv("OWNER_USERNAME", "Sohan_rajpurohit_1")
@@ -29,7 +29,7 @@ Jᴜsᴛ Tʏᴘᴇ ᴀ Mᴏᴠɪᴇ Nᴀᴍᴇ 🎬 \n\n If movies not available
 ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇʀᴇ ʏᴏᴜʀ ʟɪɴᴋꜱ.
 
 ꜰᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏ ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴘ ✅""" )
-    UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL", "-1001859917060")
+    UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL", "-10018369459140")
     DATABASE_URL = os.getenv("DATABASE_URL", "mongodb+srv://Sohanrazz:Sohanrazz@cluster0.umemvld.mongodb.net/?retryWrites=true&w=majority")
     LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", "-1001858473447"))
     RESULTS_COUNT = int(os.getenv("RESULTS_COUNT", 20))
