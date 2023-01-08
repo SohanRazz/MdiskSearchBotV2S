@@ -37,7 +37,7 @@ async def dbgive_access_handler(c:Client,query: CallbackQuery):
             print(e)
 
         await query.edit_message_text("Database Channel Verified. Make sure you have joined the channel")
-        return await c.send_message(from_user, f"Your channel {db_channel} has been verified. @Mdisk_Search_Netflix_Bot will search posts from your Database channel in your group")
+        return await c.send_message(from_user, f"Your channel {db_channel} has been verified. @Mdisk_Netflix_Search_bot will search posts from your Database channel in your group")
     except Exception as e:
         print(e)
 
@@ -119,7 +119,7 @@ async def button(bot, cmd: CallbackQuery):
             ], 
                                         [
                         InlineKeyboardButton("How To Watch?", callback_data="Watch_msg"),
-                        InlineKeyboardButton('Support', url='http://t.me/messagecontactbot')
+                        InlineKeyboardButton('Support', url='https://t.me/Chat_admin_mdisk_bot')
                     ]
                 ]
             ),
@@ -189,7 +189,7 @@ async def button(bot, cmd: CallbackQuery):
             ], 
                                         [
                         InlineKeyboardButton("Terabox", callback_data="Terabox_msg"),
-                        InlineKeyboardButton('Watch Video', url='https://t.me/netflix_hindi_movies_4k/371')
+                        InlineKeyboardButton('Watch Video', url='https://t.me/netflix_hindi_movies_4k2')
                     ],[
                         InlineKeyboardButton("Back", callback_data="Watch_msg")
                     ]
