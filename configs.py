@@ -29,7 +29,7 @@ Jᴜsᴛ Tʏᴘᴇ ᴀ Mᴏᴠɪᴇ Nᴀᴍᴇ 🎬 \n\n If movies not available
 ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇʀᴇ ʏᴏᴜʀ ʟɪɴᴋꜱ.
 
 ꜰᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏ ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴘ ✅""" )
-    UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL", "-10018369459140")
+    UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL", "-1001836945914")
     DATABASE_URL = os.getenv("DATABASE_URL", "mongodb+srv://Sohanrazz:Sohanrazz@cluster0.umemvld.mongodb.net/?retryWrites=true&w=majority")
     LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", "-1001858473447"))
     RESULTS_COUNT = int(os.getenv("RESULTS_COUNT", 20))
