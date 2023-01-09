@@ -34,7 +34,7 @@ Jᴜsᴛ Tʏᴘᴇ ᴀ Mᴏᴠɪᴇ Nᴀᴍᴇ 🎬 \n\n If movies not available
     LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", "-1001858473447"))
     RESULTS_COUNT = int(os.getenv("RESULTS_COUNT", 20))
     BROADCAST_AS_COPY = os.getenv("BROADCAST_AS_COPY", "True")
-    UPDATES_CHANNEL_USERNAME = os.getenv("UPDATES_CHANNEL_USERNAME", "Netflix_Hindi_Movies_4K")
+    UPDATES_CHANNEL_USERNAME = os.getenv("UPDATES_CHANNEL_USERNAME", "Netflix_Hindi_Movies_4K2")
     FORCE_SUB = os.getenv("FORCE_SUB", "True")
     AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", 120))
     MDISK_API = os.getenv("MDISK_API", "IZSO9tr43cOBf6Erwv5q")
