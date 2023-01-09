@@ -5,14 +5,14 @@ import os
 
 
 class Config(object):
-    API_ID = int(os.getenv("API_ID", "25739850"))
-    API_HASH = os.getenv("API_HASH", "17f7c8149ccd8aa8fdbf611e946cc60d")
-    BOT_TOKEN = os.getenv("BOT_TOKEN", "5837036557:AAG0qjoBBM97NufruZI1yEHdQUrnCDrlKYY")
+    API_ID = int(os.getenv("API_ID", "22544797"))
+    API_HASH = os.getenv("API_HASH", "a72f8636d1ad8cdda4321e0507f458cc")
+    BOT_TOKEN = os.getenv("BOT_TOKEN", "5655172579:AAF4uv3q0lXWEWZZGmF7zpHazV6xNQRGhck")
     BOT_SESSION_NAME = os.getenv("BOT_SESSION_NAME", "mdisksohanbot")
-    USER_SESSION_STRING = os.getenv("USER_SESSION_STRING", "BQCJiKmtXAbUtiqbuhLo0ZCFCeZiTpi0ZoHi-BC650IR0fSHUQKaozyyTByc8QXGwv1vovDbp9GxX-ML7yIzh-3Vt8R20Ym7StbYuX1Lwpr6qsSVp5yvjSQ3hmPIDPPC9S4dV3qL5KczU0hmbaopETfAZbI9Risi1U1BCrJwMq_WdMZ_RNpBeBdZHPk8TOi1SbIfmUU5kvgFRaTfEbORHtrEFZ5vZi_4K6qVikTKU6ztkhGZdOFs8k7KI-sUFIZF4-EgORcylelip2gA21IUFXAZBZiQteIFNarb3Kauog3sbRKOhLp43q6xGNCOPoKRpbM2p8xAI1pp94R8m6Gm0S9YAAAAAU91KlsA")
-    CHANNEL_ID = int(os.getenv("CHANNEL_ID", "-1001836945914")) 
-    BOT_USERNAME = os.getenv("BOT_USERNAME", "@mdisk_NETFLIX_SEARCH_BOT")
-    BOT_OWNER = int(os.getenv("BOT_OWNER", "5897793065"))
+    USER_SESSION_STRING = os.getenv("USER_SESSION_STRING", "1BVtsOI0Bu67mVMGSlXzTwaZOYT35gCiB9YfngO8fvHB2jNqwzO0-9GtBMVEzp8ZIxJQ9i7MqKSbFR9VRBIhlCpUpStXa5zChIheEur0yqekrf5kUqtNP9DPZyVy72PiQibTgK5AFHf_GVMl31YPEBnzGhVewVR805OdsyGvtkHC1wQpxphmju4ZF3MZzP-o3UOtp1nvRtSq0apEQ-jEWZuRESytMzQNO78NNgTCwgbA3NWnUOzA5vHtIwwztbYsV7gVS0Fu91Bb72IPDg0dWA_Ccz4RAa-O4cyW3fFOY02hTlo8WMOxjHxBVUEWTBLnU_BY3IRZ8O1Pbkt1femodIXVAmwDr9mQ=")
+    CHANNEL_ID = int(os.getenv("CHANNEL_ID", "-1001154529469")) 
+    BOT_USERNAME = os.getenv("BOT_USERNAME", "Mdisk_search_netflix_bot")
+    BOT_OWNER = int(os.getenv("BOT_OWNER", "5868100284"))
 #    OWNER_USERNAME = os.getenv("OWNER_USERNAME", "Sohan_rajpurohit_7413")
     BACKUP_CHANNEL = os.getenv("BACKUP_CHANNEL", "Supportchat")
 #    GROUP_USERNAME = os.getenv("GROUP_USERNAME")
@@ -22,22 +22,22 @@ I ᴀᴍ Mᴏᴠɪᴇ Sᴇᴀʀᴄʜ Rᴏʙᴏᴛ 🔍.
 
 I Wɪʟʟ Pʀᴏᴠɪᴅᴇ Eᴠᴇʀʏ Mᴏᴠɪᴇ Iɴ Mᴅɪsᴋ Lɪɴᴋ 🔗
 
-Jᴜsᴛ Tʏᴘᴇ ᴀ Mᴏᴠɪᴇ Nᴀᴍᴇ 🎬 \n\n If movies not available request movie here @Request_Movies_Searcher**""" ) 
+Jᴜsᴛ Tʏᴘᴇ ᴀ Mᴏᴠɪᴇ Nᴀᴍᴇ 🎬 \n\n If movies not available request movie here @requestluciferdownload**""" ) 
     START_PHOTO = os.getenv("START_PHOTO", "https://telegra.ph/file/e9c215c9c82cedd1fd959.jpg")
     HOME_TEXT = os.getenv("HOME_TEXT", """ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕
 
 ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇʀᴇ ʏᴏᴜʀ ʟɪɴᴋꜱ.
 
 ꜰᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏ ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴘ ✅""" )
-    UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL", "-1001836945914")
+    UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL", "-1001154529469")
     DATABASE_URL = os.getenv("DATABASE_URL", "mongodb+srv://Sohanrazz:Sohanrazz@cluster0.umemvld.mongodb.net/?retryWrites=true&w=majority")
-    LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", "-1001858473447"))
+    LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", "-1001852774435"))
     RESULTS_COUNT = int(os.getenv("RESULTS_COUNT", 20))
     BROADCAST_AS_COPY = os.getenv("BROADCAST_AS_COPY", "True")
-    UPDATES_CHANNEL_USERNAME = os.getenv("UPDATES_CHANNEL_USERNAME", "Netflix_Hindi_Movies_4K2")
+    UPDATES_CHANNEL_USERNAME = os.getenv("UPDATES_CHANNEL_USERNAME", "Netflix_Hindi_Movies_4K")
     FORCE_SUB = os.getenv("FORCE_SUB", "True")
     AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", 120))
-    MDISK_API = os.getenv("MDISK_API", "neRblmUPT2bDq65y6iDb")
+    MDISK_API = os.getenv("MDISK_API", "IZSO9tr43cOBf6Erwv5q")
     VERIFIED_TIME  = int(os.getenv("VERIFIED_TIME", "31"))
     ABOUT_BOT_TEXT = os.getenv("ABOUT_TEXT", """I ᴏɴʟʏ ꜱʜᴀʀᴇ ᴛʜᴇ ᴘᴏꜱᴛ ꜰʀᴏᴍ ᴘᴇᴏᴘʟᴇ'ꜱ ᴄʜᴀɴɴᴇʟ! 
 
@@ -45,7 +45,7 @@ Jᴜsᴛ Tʏᴘᴇ ᴀ Mᴏᴠɪᴇ Nᴀᴍᴇ 🎬 \n\n If movies not available
 
 i ɴᴏᴛ ꜱᴛᴏʀᴇ ᴀɴʏ ꜰɪʟᴇꜱ ᴏʀ ᴛᴇxᴛ ɪɴ  ᴍʏ ᴅᴀᴛᴀʙᴀꜱᴇ.
 
-ᴅᴍ ꜰᴏʀ ᴀɴʏ Qᴜᴇʀʏ @Sohan_Rajpurohit_1 🤖""" )
+ᴅᴍ ꜰᴏʀ ᴀɴʏ Qᴜᴇʀʏ @Sohan_Rajpurohit_7413 🤖""" )
     ABOUT_WATCH_TEXT = """
 ʜᴇʏ ʙᴜᴅᴅʏ, 
 
@@ -54,7 +54,7 @@ i ɴᴏᴛ ꜱᴛᴏʀᴇ ᴀɴʏ ꜰɪʟᴇꜱ ᴏʀ ᴛᴇxᴛ ɪɴ  ᴍʏ ᴅ
 
 ᴛᴇʀᴀ ʙᴏx - ᴀɢᴀʀ ᴀᴘᴘᴋᴏ ɴᴀʜɪ ᴘᴀᴛᴀ ᴋɪ ᴛᴇʀᴀʙᴏx sᴇ ᴍᴏᴠɪᴇs ᴋᴀɪsᴇ ᴅᴇᴋʜᴇ ᴛᴏ ɴɪᴄʜᴇ ᴅɪʏᴇ ɢᴀʏᴇ ᴛᴇʀᴀ ʙᴏx ʙᴜᴛᴛᴏɴ ᴘᴀʀ ᴄʟɪᴄᴋ ᴋᴀʀᴇ
 
-ʀᴇɢᴀʀᴅs - @Netflix_Hindi_Movies_4K2"""
+ʀᴇɢᴀʀᴅs - @Netflix_Hindi_Movies_4K"""
     ABOUT_MDISK_TEXT = """
 𝗠𝗱𝗶𝘀𝗸 𝗸𝗶 𝗹𝗶𝗻𝗸𝘀 𝗢𝗽𝗲𝗻 𝗔𝗶𝘀𝗲 𝗞𝗮𝗿𝗲👇🔥
 वीडियो प्ले करने में कोई प्रोब्लम अ रही हो तो Mx Player App डाउनलोड करले😊👍
@@ -94,11 +94,11 @@ https://terabox.com/s/1QZGvLaoU_VMaSCDT2NNvOQ
 
 🍓 Sᴛᴇᴘ 3 - ɢʀᴏᴜᴘ ᴍᴇ "/License" ᴛʏᴘᴇ ᴋᴀʀ ᴋᴇ ꜱᴇɴᴅ ᴋᴀʀɴᴀ ʜᴏɢᴀ!
 
-ꜰɪʀ ʙᴏᴛ ᴋᴇ ᴏᴡɴᴇʀ ᴀᴘᴋᴀ ʏᴇ ʀᴇQᴜᴇꜱᴛ ᴀᴄᴄᴇᴘᴛ ᴋᴀʀ ʟᴇɴɢᴇ.  @Sohan_Rajpurohit_1
+ꜰɪʀ ʙᴏᴛ ᴋᴇ ᴏᴡɴᴇʀ ᴀᴘᴋᴀ ʏᴇ ʀᴇQᴜᴇꜱᴛ ᴀᴄᴄᴇᴘᴛ ᴋᴀʀ ʟᴇɴɢᴇ.  @Sohan_Rajpurohit_7413 
 
 🍓 Sᴛᴇᴘ 4 - ɢʀᴏᴜᴘ ᴍᴇ "/database - ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ɪᴅ" ᴛʏᴘᴇ ᴋᴀʀ ᴋᴇ ꜱᴇɴᴅ ᴋᴀʀɴᴀ ʜᴏɢᴀ.
 
-ꜰɪʀ ʙᴏᴛ ᴋᴇ ᴏᴡɴᴇʀ ᴀᴘᴋᴀ ʏᴇ ʀᴇQᴜᴇꜱᴛ ʙʜɪ ᴀᴄᴄᴇᴘᴛ ᴋᴀʀ ʟᴇɴɢᴇ @Sohan_Rajpurohit_1
+ꜰɪʀ ʙᴏᴛ ᴋᴇ ᴏᴡɴᴇʀ ᴀᴘᴋᴀ ʏᴇ ʀᴇQᴜᴇꜱᴛ ʙʜɪ ᴀᴄᴄᴇᴘᴛ ᴋᴀʀ ʟᴇɴɢᴇ @Sohan_Rajpurohit_7413
 
 🍓 Sᴛᴇᴘ 5 - ᴀʙ ᴀᴘᴋᴏ ᴀᴘɴᴇ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ᴍᴇ ᴘᴏꜱᴛ ᴅᴀʟɴɪ ʜᴏɢɪ,
 
@@ -108,7 +108,7 @@ https://terabox.com/s/1QZGvLaoU_VMaSCDT2NNvOQ
 
 ᴀɢᴀʀ ʙᴏᴛ ᴀᴅᴍɪɴ ᴀᴘᴋᴀ ʀᴇQᴜᴇꜱᴛ ᴀᴄᴄᴇᴘᴛ ɴʜɪ ᴋᴀʀ ʀᴀʜᴇ ʜᴀɪɴ ᴛᴏ ᴜɴʜᴇ ᴘᴇʀꜱᴏɴᴀʟ ᴍꜱɢ ᴋᴀʀᴇɴ.
 
-👉 @Netflix_Hindi_Movies_4K2
+👉 @Netflix_Hindi_Movies_4K
 
 """
 
