@@ -5,11 +5,11 @@ import os
 
 
 class Config(object):
-    API_ID = int(os.getenv("API_ID", "22544797"))
-    API_HASH = os.getenv("API_HASH", "a72f8636d1ad8cdda4321e0507f458cc")
+    API_ID = int(os.getenv("API_ID", "22146428"))
+    API_HASH = os.getenv("API_HASH", "a42d8cec8a28746567765dfc47ab558b")
     BOT_TOKEN = os.getenv("BOT_TOKEN", "5655172579:AAF4uv3q0lXWEWZZGmF7zpHazV6xNQRGhck")
     BOT_SESSION_NAME = os.getenv("BOT_SESSION_NAME", "mdisksohanbot")
-    USER_SESSION_STRING = os.getenv("USER_SESSION_STRING", "1BVtsOI0Bu67mVMGSlXzTwaZOYT35gCiB9YfngO8fvHB2jNqwzO0-9GtBMVEzp8ZIxJQ9i7MqKSbFR9VRBIhlCpUpStXa5zChIheEur0yqekrf5kUqtNP9DPZyVy72PiQibTgK5AFHf_GVMl31YPEBnzGhVewVR805OdsyGvtkHC1wQpxphmju4ZF3MZzP-o3UOtp1nvRtSq0apEQ-jEWZuRESytMzQNO78NNgTCwgbA3NWnUOzA5vHtIwwztbYsV7gVS0Fu91Bb72IPDg0dWA_Ccz4RAa-O4cyW3fFOY02hTlo8WMOxjHxBVUEWTBLnU_BY3IRZ8O1Pbkt1femodIXVAmwDr9mQ=")
+    USER_SESSION_STRING = os.getenv("USER_SESSION_STRING", "1BVtsOGsBu5D3sv8I84IjmhjnfhihdDwmx78iU72BCYx_46O9IFSb0VMjez__XTN0f6pfROWMAwwUfKor71cybxseamfhodNN3b4bXhfvg0KrNYhOrxv3G_b0BY4SB5xu7zx1MKEHEq5_Sa6nkJa8s2jrZXc9RbM6Y3_Y2leaVkNkUwNtPPSrpGtkQ71HfIBrGZDke2L5OGKpyU8QkZYxEj-oFQgTMW0gU7QQ2g0rpFWFWXvjSGgvTRhYXcQe-yO1onqRgSeb7iOc-daUWU2scgxhmpESshddXQK6e2fACGKHZqX2OFyl4sSOqSyor3IThXtV40ysF_ZCLPO5NwDHhhwwxwD2F-g=")
     CHANNEL_ID = int(os.getenv("CHANNEL_ID", "-1001154529469")) 
     BOT_USERNAME = os.getenv("BOT_USERNAME", "Mdisk_search_netflix_bot")
     BOT_OWNER = int(os.getenv("BOT_OWNER", "5868100284"))
