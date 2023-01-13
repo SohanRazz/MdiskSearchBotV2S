@@ -1,4 +1,4 @@
-rom configs import Config
+from configs import Config
 from pyrogram import Client, filters, idle
 from pyrogram.errors import QueryIdInvalid
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InlineQuery, InlineQueryResultArticle, \
@@ -19,178 +19,122 @@ User = Client(
     session_name=Config.USER_SESSION_STRING,
     api_id=Config.API_ID,
     api_hash=Config.API_HASH
-async def get_user_join(id):
-    if Config.FORCE_SUB == "False":
-        return True
-
-    ok = True
-    try:
-        await tbot(GetParticipantRequest(channel=int(Config.UPDATES_CHANNEL), participant=id))
-        ok = True
-    except UserNotParticipantError:
-        ok = False
-    return ok
-
-
-@tbot.on(events.NewMessage(incoming=True))
-async def message_handler(event):
-    try:
-        if event.message.post:
-            return
-
-        # if event.is_channel:return
-        if event.text.startswith("/"):return
-
-        print("\n")
-        print("Message Received: " + event.text)
-
-        # Force Subscription
-        if  not await get_user_join(event.sender_id):
-            haha = await event.reply(f'''**Hey! {event.sender.first_name} 😃**
-
-**You Have To Join Our Update Channel To Use Me ✅**
-
-**Click Below Button To Join Now.👇🏻**''', buttons=Button.url('🍿Updates Channel🍿', f'https://t.me/{Config.UPDATES_CHANNEL_USERNAME}'))
-            await asyncio.sleep(Config.AUTO_DELETE_TIME)
-            return await haha.delete()
-
-        args = event.text
-        args = await validate_q(args)
-
-        print("Search Query: {args}".format(args=args))
-        print("\n")
-
-        if not args:
-            return
-
-        txt = await event.reply('**Printing Links For "{}" 🔍**'.format(event.text))
-
-
-
-        search = []
-        if event.is_group or event.is_channel:
-            group_info = await db.get_group(str(event.chat_id).replace("-100", ""))
-
-            if group_info["has_access"] and group_info["db_channel"] and await db.is_group_verified(str(event.chat_id).replace("-100", "")):
-                CHANNEL_ID = group_info["db_channel"]
-            else:
-                CHANNEL_ID = Config.CHANNEL_ID
-        else:
-            CHANNEL_ID = Config.CHANNEL_ID
-
-
-        async for i in AsyncIter(re.sub("__|\*", "", args).split()):
-            if len(i) > 2:
-               
-                search_msg = client.iter_messages(CHANNEL_ID, limit=5, search=i)
-                search.append(search_msg)
-
-        username = Config.UPDATES_CHANNEL_USERNAME
-        answer = f'**Join** [@{username}](https://telegram.me/{username}) \n\n'
-
-        c = 0
-
-        async for msg_list in AsyncIter(search):
-            async for msg in msg_list:
-                c += 1
-                f_text = re.sub("__|\*", "", msg.text)
-
-                f_text = await link_to_hyperlink(f_text)
-                answer += f'\n\n\n✅ PAGE {c}:\n\n━━━━━━━━━\n\n' + '' + f_text.split("\n", 1)[0] + '' + '\n\n' + '' + f_text.split("\n", 2)[
-                    -1] + "\n\n"
-                
-            # break
-        finalsearch = []
-        async for msg in AsyncIter(search):
-            finalsearch.append(msg)
-
-        if c <= 0:
-            answer = f'''** Sorry {event.sender.first_name} No Results Found For {event.text}**
-
-**Please check the spelling on Or Request Movies here  https://t.me/+UYEWxNQG6l43OGQ1 ** [Google](http://www.google.com/search?q={event.text.replace(' ', '%20')}%20Movie) 🔍
-**Click On The Help To Know How To Watch**
-    '''
-
-            newbutton = [Button.url('Help🙋',
-                                    f'https://t.me/+UYEWxNQG6l43OGQ1')]
-
-            await txt.delete()
-            result = await event.reply(answer, buttons=newbutton, link_preview=False)
-            await asyncio.sleep(Config.AUTO_DELETE_TIME)
-            await event.delete()
-            return await result.delete()
-        else:
-            pass
-
-        answer += f"\n\n**Uploaded By @{Config.UPDATES_CHANNEL_USERNAME}**"
-        answer = await replace_username(answer)
-        html_content = await markdown_to_html(answer)
-        html_content = await make_bold(html_content)
-        
-        tgraph_result = await telegraph_handler(
-            html=html_content,
-            title=event.text,
-            author=Config.BOT_USERNAME
-        )
-        message = f'**Click Here 👇 For "{event.text}"**\n\n[🍿🎬 {str(event.text).upper()}\n🍿🎬 {str("Click me for results").upper()}]({tgraph_result})'
-
-        newbutton = [Button.url('How To Watch ❓',
-                                    f'https://t.me/+UYEWxNQG6l43OGQ1')]
-
-        await txt.delete()
-        await asyncio.sleep(0.5)
-        result = await event.reply(message, buttons=newbutton, link_preview=False)
-        await asyncio.sleep(Config.AUTO_DELETE_TIME)
-        # await event.delete()
-        return await result.delete()
-
-    except Exception as e:
-        print(e)
-        await txt.delete()
-        result = await event.reply("I am Unable Search,Please Search In @Movies_Searcher2🙏")
-        await asyncio.sleep(Config.AUTO_DELETE_TIME)
-        await event.delete() 
-        return await result.delete()
-
-
-async def escape_url(str):
-    escape_url = urllib.parse.quote(str)
-    return escape_url
-
-# Bot Client for Inline Search
-Bot = Client(
-    session_name=Config.BOT_SESSION_NAME,
-    api_id=Config.API_ID,
-    api_hash=Config.API_HASH,
-    bot_token=Config.BOT_TOKEN,
-    plugins=dict(root="plugins")
 )
 
-print()
-print("-------------------- Initializing Telegram Bot --------------------")
+@Bot.on_message(filters.private & filters.command("start"))
+async def start_handler(_, event: Message):
+	await event.reply_photo("https://telegra.ph/file/19eeb26fa2ce58765917a.jpg",
+                                caption=Config.START_MSG.format(event.from_user.mention),
+                                reply_markup=InlineKeyboardMarkup([
+					[InlineKeyboardButton('❤ Donation Link', url='https://www.telegram.dog/greymatters_about')],
+					[InlineKeyboardButton("Updates 𝙲𝚑𝚊𝚗𝚗𝚊𝚕", url="https://t.me/GreyMatter_Bots")],
+					[InlineKeyboardButton("Donation", callback_data="Help_msg"),
+                                        InlineKeyboardButton("About", callback_data="About_msg")]
+				]))
+
+@Bot.on_message(filters.private & filters.command("help"))
+async def help_handler(_, event: Message):
+
+    await event.reply_text(Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
+        reply_markup=InlineKeyboardMarkup([
+		[InlineKeyboardButton('❤ Donation Link', url='https://www.telegram.dog/greymatters_about')
+	 ],[InlineKeyboardButton("Updates 𝙲𝚑𝚊𝚗𝚗𝚊𝚕", url="https://t.me/GreyMatter_Bots"), 
+             InlineKeyboardButton("𝙰𝚋𝚘𝚞𝚝", callback_data="About_msg")]
+        ])
+    )
+
+@Bot.on_message(filters.incoming)
+async def inline_handlers(_, event: Message):
+    if event.text == '/start':
+        return
+    answers = f'**📂 Results For ➠ {event.text} \n\n➠ Type Only Movie Name With Correct Spelling.✍️\n➠ Add Year For Better Result.🗓️\n➠ Join @GreyMatter_Bots\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
+    async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
+        if message.text:
+            thumb = None
+            f_text = message.text
+            msg_text = message.text.html
+            if "|||" in message.text:
+                f_text = message.text.split("|||", 1)[0]
+                msg_text = message.text.html.split("|||", 1)[0]
+            answers += f'**🍿 Title ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n📜 About ➠ ' + '' + f_text.split("\n", 2)[-1] + ' \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\nLink Will Auto Delete In 60Sec...⏰\n\n**'
+    try:
+        msg = await event.reply_text(answers)
+        await asyncio.sleep(65)
+        await event.delete()
+        await msg.delete()
+    except:
+        print(f"[{Config.BOT_SESSION_NAME}] - Failed to Answer - {event.from_user.first_name}")
+
+
+@Bot.on_callback_query()
+async def button(bot, cmd: CallbackQuery):
+        cb_data = cmd.data
+        if "About_msg" in cb_data:
+            await cmd.message.edit(
+			text=Config.ABOUT_BOT_TEXT,
+			disable_web_page_preview=True,
+			reply_markup=InlineKeyboardMarkup(
+				[
+					[
+						InlineKeyboardButton('❤ Donation Link', url='https://www.telegram.dog/greymatters_about')
+					],
+					[
+						InlineKeyboardButton("Updates 𝙲𝚑𝚊𝚗𝚗𝚊𝚕", url="https://t.me/GreyMatter_Bots")
+					],
+					[
+						InlineKeyboardButton("Home", callback_data="gohome")
+					]
+				]
+			),
+			parse_mode="html"
+		)
+        elif "Help_msg" in cb_data:
+            await cmd.message.edit(
+			text=Config.ABOUT_HELP_TEXT,
+			disable_web_page_preview=True,
+			reply_markup=InlineKeyboardMarkup(
+				[
+					[
+					InlineKeyboardButton('❤ Donation Link', url='https://www.telegram.dog/greymatters_about')
+					],
+					[
+					InlineKeyboardButton("Updates 𝙲𝚑𝚊𝚗𝚗𝚊𝚕", url="https://t.me/GreyMatter_Bots")
+					], 
+                                        [
+					InlineKeyboardButton("Home", callback_data="gohome"),
+					InlineKeyboardButton("About", callback_data="About_msg")
+					]
+				]
+			),
+			parse_mode="html"
+		)
+        elif "gohome" in cb_data:
+            await cmd.message.edit(
+			text=Config.START_MSG.format(cmd.from_user.mention),
+			disable_web_page_preview=True,
+			reply_markup=InlineKeyboardMarkup(
+				[
+                                        [
+					InlineKeyboardButton('❤ Donation Link', url='https://www.telegram.dog/greymatters_about')
+					],
+					[
+					InlineKeyboardButton("Updates 𝙲𝚑𝚊𝚗𝚗𝚊𝚕", url="https://t.me/GreyMatter_Bots")
+					],
+					[
+					InlineKeyboardButton("Donation", callback_data="Help_msg"),
+					InlineKeyboardButton("About", callback_data="About_msg")
+					]
+				]
+			),
+			parse_mode="html"
+		)
+
 # Start Clients
 Bot.start()
-
-print("------------------------------------------------------------------")
-print()
-print(f"""
- _____________________________________________   
-|                                             |  
-|          Deployed Successfully              |  
-|              Join @{Config.UPDATES_CHANNEL_USERNAME}                 |
-|_____________________________________________|
-    """)
-
-# User.start()
-with tbot, client:
-    tbot.run_until_disconnected()
-    client.run_until_disconnected()
-
+User.start()
 # Loop Clients till Disconnects
 idle()
 # After Disconnects,
 # Stop Clients
-print()
-print("------------------------ Stopped Services ------------------------")
 Bot.stop()
-# User.stop()
+User.stop()
