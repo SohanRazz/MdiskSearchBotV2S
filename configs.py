@@ -5,15 +5,16 @@ import os
 
 
 class Config(object):
-    API_ID = int(os.getenv("API_ID", "21948679"))
-    API_HASH = os.getenv("API_HASH", "d1a9ac6ab9cfa0cefc908280c8a3cca1")
-    BOT_TOKEN = os.getenv("BOT_TOKEN", "5604228803:AAFFgUJxp2jduf6H12qnknHWdGfQ7Ahvctc")
-    BOT_SESSION_NAME = os.getenv("BOT_SESSION_NAME", "mdisksohanbot")
-    USER_SESSION_STRING = os.getenv("USER_SESSION_STRING", "1BVtsOJoBu24cYb47wDZ2UeH2cn74ZPnrjoW9jl78UYl96ePDafvUTGuDqKsGwKlpmEt7o3catutEYcIwJMp993NH_1BL2DGFukU7SnAm_p5UT_64DmIY7bCQsTEZT6l4F_fn9_eAkKFG2ULghBQfY0XaZjN1mlTFh24MvqePmbvALhVdd7uQiWBNt0BDdnbqoNkJdH_VcOwmeisCc86n7_yenyWoEhDdZMYpjh5pFlEAhgSoc5I_waxMHIovPSBZ71NhGF3eNjGpzp-gQq3OuLk2eAiouoRLeWJ1tusk001DF4i68xeM6_GfYoQ7R1wG3FGR5sCGmhYS5pQTM7FzMLIeeUtUTZI=")
+    API_ID = int(os.getenv("API_ID", "29219170
+"))
+    API_HASH = os.getenv("API_HASH", "12d6648ede66e1ef31d9c455317ee09d")
+    BOT_TOKEN = os.getenv("BOT_TOKEN", "5837036557:AAGJ-samJLemOjaikiCoOSg15yMWau2v1U8")
+    BOT_SESSION_NAME = os.getenv("BOT_SESSION_NAME", "mdisksohanbot2")
+    USER_SESSION_STRING = os.getenv("USER_SESSION_STRING", "1BVtsOKUBu2zK6Cr43WOlmC52_IcTdsJ6q7EuKsRPxWFikTRcyBm07afIXeJxDVeFnR7btHSxm5uDtT2CDn-rZCYn4BHl4KAtOWeFtTlfleqFXaV9GDz_3zOQ6KfcsRFHWTMrmtKTkXKF3kSbf-2BGflFSXNkXjXlfcHEhirKIuvf8K9TdN-G08fChRyvB217-6W82TuvVp15jS6TCYh4NCeb2N0eiGtNJaO6VNXooJLK0cjfxCIwZdFxntsfxiF1Ze3ZXgESseSNfKdOdo67kWu5eKVUtKic9MvD2Xig8RgGr-M5WXGGeFkQmq-s1jkcXlfCxnr24eOfqLsNHgoeDJYvgeJN2So=")
     CHANNEL_ID = int(os.getenv("CHANNEL_ID", "-1001836945914")) 
-    BOT_USERNAME = os.getenv("BOT_USERNAME", "Mdisk_Movies_Searcher2_bot")
-    BOT_OWNER = int(os.getenv("BOT_OWNER", "5848443926"))
-#    OWNER_USERNAME = os.getenv("OWNER_USERNAME", "Sohan_razz_1)
+    BOT_USERNAME = os.getenv("BOT_USERNAME", "mdisk_NETFLIX_SEARCH_BOT")
+    BOT_OWNER = int(os.getenv("BOT_OWNER", "5897793065"))
+#    OWNER_USERNAME = os.getenv("OWNER_USERNAME", "Sohan_Rjpurohit_1")
     BACKUP_CHANNEL = os.getenv("BACKUP_CHANNEL", "Supportchat")
 #    GROUP_USERNAME = os.getenv("GROUP_USERNAME")
     START_MSG = os.getenv("START_MSG", """**Hᴇʏ {}, 
