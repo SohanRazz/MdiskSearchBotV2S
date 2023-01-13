@@ -1,21 +1,24 @@
-from os import link
-from telethon import Button
-from configs import Config
-from pyrogram import Client, idle
+rom configs import Config
+from pyrogram import Client, filters, idle
+from pyrogram.errors import QueryIdInvalid
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InlineQuery, InlineQueryResultArticle, \
+    InputTextMessageContent
+from TeamTeleRoid.forcesub import ForceSub
 import asyncio
-from telethon import TelegramClient
-from telethon.sessions import StringSession
-from plugins.tgraph import *
-from helpers import *
-from telethon import TelegramClient, events
-import urllib.parse
-from telethon.errors import UserNotParticipantError
-from telethon.tl.functions.channels import GetParticipantRequest
-import re
-tbot = TelegramClient('mdisktelethonbot', Config.API_ID, Config.API_HASH).start(bot_token=Config.BOT_TOKEN)
-client = TelegramClient(StringSession( Config.USER_SESSION_STRING), Config.API_ID, Config.API_HASH)
 
+# Bot Client for Inline Search
+Bot = Client(
+    session_name=Config.BOT_SESSION_NAME,
+    api_id=Config.API_ID,
+    api_hash=Config.API_HASH,
+    bot_token=Config.BOT_TOKEN
+)
 
+# User Client for Searching in Channel.
+User = Client(
+    session_name=Config.USER_SESSION_STRING,
+    api_id=Config.API_ID,
+    api_hash=Config.API_HASH
 async def get_user_join(id):
     if Config.FORCE_SUB == "False":
         return True
